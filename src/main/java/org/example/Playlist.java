@@ -25,7 +25,7 @@ public class Playlist {
                 if (play < sum - difference && j < array.length) {
                     Random random = new Random();
                     int i = random.nextInt(250);
-                    if (indexI(index, i)) {
+                    if (contains(index, i)) {
                         play = play + array[i];
                         temp[j] = array[i];
                         index[j] = i;
@@ -51,7 +51,7 @@ public class Playlist {
         System.out.println(m);
         return result;
     }
-    public static boolean indexI(int [] index,int i){
+    public static boolean contains(int [] index, int i){
         for (int j = 0; j <index.length; j++) {
             if(index[j]==i){
                 return false;
