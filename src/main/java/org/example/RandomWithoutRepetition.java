@@ -9,15 +9,17 @@ public class RandomWithoutRepetition {
         for (int i = 0; i < array.length; i++) {
             array[i]=-1;
         }
+        int count=0;
         for (int i = 0; i < array.length; i++) {
-            index[i] = random.nextInt(70)+1;
+            index[i] = random.nextInt(80)+1;
             if (contains(index, index[i],i)) {
                 array[i]=index[i];
+                count++;
             }
         }
-        int [] result = new int[70];
+        int [] result = new int[count];
         int j=0;
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; j < result.length; i++) {
             if(array[i]!=-1){
                 result[j]=array[i];
                 j++;
